@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>DeniseSpradling Senior Project About Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+* {box-sizing: border-box}
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+.tablink {
+  background-color: blue;
+  color: white;
+  float: justify;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+.tablink:hover {
+  background-color: deepskyblue;
+}
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+#Design {background-color: darkblue;}
+#Web {background-color: skyblue;}
+#Picture {background-color: darkblue;}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+</style>
+</head>
+
+<body>
+	
+<div id="container">
+	<div id="banner">
+		<h3>
+			<img src="images/deniseLogo1.jpg" alt="Logo" width="138" height="54"/>
+			Denise Spradling Design Portfolio
+		</h3>
+	</div>
+	<div id="nav" align="center">
+		<nav align="center">
+		<a href="index.html">Home</a> | 
+		<a href="about.html">About</a> | 
+		<a href="">Protfolio</a> | 
+		<a href="pricing.html">Pricing & Serives</a> | 
+		<a href="contact.html">Contacts</a>
+		</nav>
+	</div>
+		<br>
+	<div id="main" align="center">
+		<div id="port" align="center">
+		<button class="tablink" onclick="openPage('Graphic', this, 'blue')">Graphic Design</button>
+		<button class="tablink" onclick="openPage('Web', this, 'skyblue')" id="defaultOpen">Web Design</button>
+		<button class="tablink" onclick="openPage('Picture', this, 'blue')">Pictures</button>
+		
+	<div id="Graphic" class="tabcontent">
+		  <div class="row"> 
+		  <div class="column">
+			<img src="images/deniseLogo1.jpg" style="width:100%">
+			<img src="images/LightHouse1.JPG" style="width:100%">
+		 </div>
+		  <div class="column">
+			<img src="images/Road.JPG" style="width:100%">
+		  </div>  
+		</div>
+	 </div>
+		<div id="Web" class="tabcontent">
+		  <div class="row"> 
+			  <div class="column" align="justify">
+		  <img src="images/fraud.png" style="width:100%">
+			  </div>
+		  <div class="column" align="justify">
+			<img src="images/fever.png" style="width:100%">
+		  </div>  
+		  </div>
+		</div>
+		<div id="Picture" class="tabcontent">
+		   <div class="row"> 
+		  <div class="column">
+			<img src="images/Sunflower_ip1.png" style="width:100%">
+			<img src="images/LightHouse1.JPG" style="width:100%">
+		  </div>
+		  <div class="column">
+			<img src="images/Road.JPG" style="width:100%">
+		  </div>  
+		  </div>
+		 </div>
+		</div>
+		<script>
+		function openPage(pageName,elmnt,color) {
+		  var i, tabcontent, tablinks;
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablink");
+		  for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].style.backgroundColor = "";
+		  }
+		  document.getElementById(pageName).style.display = "block";
+		  elmnt.style.backgroundColor = color;
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+		
+//start picture script
+		var elements = document.getElementsByClassName("column");
+
+		// Declare a loop variable
+		var p;
+
+		// Two images side by side
+		function two() {
+		  for (p = 0; i < elements.length; p++) {
+			elements[p].style.msFlex = "50%";  // IE10
+			elements[p].style.flex = "50%";
+		  }
+		}
+
+		</script>
+			<p align="center">Follow me on Social Media @ DSDesign.</p>
+			<br><br>
+		</div>
+			
+		<div id="bottom" align="center">
+			<br>
+			|  <a href="https://www.facebook.com" target="_blank">
+			<img src="images/facebook.png" alt="Facebook" width="75px" height="75px"/></a>  |
+				<a href="https://www.instagram.com" target="_blank">
+			<img src="images/insta.png" alt="Instagram" width="75px" height="75px"/></a>  |
+				<a href="https://www.snapchat.com" target="_blank">
+			<img src="images/snapchat.png" alt="Snapchat" width="75px" height="75px"/></a>  |
+				<a href="https://www.twitter.com" target="_blank">
+			<img src="images/twitter.png" alt="Twitter" width="75px" height="75px"/></a>  |
+				<a href="https://www.linkedin.com" target="_blank">
+			<img src="images/linked.png" alt="LinkedIn" width="75px" height="75px"/></a>  |
+				<a href="https://www.youtube.com" target="_blank">
+			<img src="images/youtube.png" alt="YouTube" width="75px" height="75px"/></a>  |
+		</div>
+	</div>
+</div>
+</body>
+</html>
